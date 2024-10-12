@@ -4,7 +4,7 @@
 e = 0
 d = 0
 a = int(input())
-if a > 0 and a < 100:
+if a > 9 and a < 100:
     d += 1
 else:
     e += 1

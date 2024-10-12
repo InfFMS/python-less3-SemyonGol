@@ -1,16 +1,14 @@
 # с клавиатуры вводятся числа, ввод завершается числом 0.
 # Определить минимальное и максимальное из введённых чисел.
-a = 1
-b = 1
-m = 0
-M = 0
-while a != 0 or b != 0:
+a = int(input())
+m = a
+M = a
+while a != 0:
     a = int(input())
-    b = int(input())
-    if a >= b:
+    if a==0:
+        break
+    elif a > M:
         M = a
-        m = b
-    else:
+    elif a < m:
         m = a
-        M = b
-print(m, M)
+print('Minimum number:',m,'Maximum number:', M)

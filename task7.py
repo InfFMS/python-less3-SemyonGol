@@ -4,4 +4,19 @@
 # Числа Фибоначчи – это последовательность чисел,
 # которая начинается с двух единиц и каждое следующее число
 # равно сумме двух предыдущих: 1, 1, 2, 3, 5, 8, 13, …
-
+a = int(input())
+m = a
+f1 = 0
+f2 = 1
+while a != 0:
+    a = int(input())
+    if a == 0:
+        break
+    for i in range(2, 100):
+        f1 = f1 + f2
+        if f1 == a and a < m:
+            m = a
+if f1 == a:
+    print('Minimal Fibonacci number:', m)
+else:
+    print('None of input numbers are Fibonacci')

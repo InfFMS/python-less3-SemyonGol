@@ -9,7 +9,7 @@ for i in range(1, 1024):
     if a == 2**i:
         deg2 += a
         n += 1
-if a ==0:
+if a == 0:
     n += 1
 while a != 0:
     a = int(input())
@@ -17,4 +17,7 @@ while a != 0:
         if a == 2**i:
             deg2 += a
             n += 1
-print('Arithmetic mean of numbers in format 2**n:', deg2/n)
+if deg2 == 0:
+    print('None of input number are powers of 2')
+else:
+    print('Arithmetic mean of numbers in format 2**n:', deg2/n)
