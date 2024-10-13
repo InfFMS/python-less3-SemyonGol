@@ -5,18 +5,23 @@
 # которая начинается с двух единиц и каждое следующее число
 # равно сумме двух предыдущих: 1, 1, 2, 3, 5, 8, 13, …
 a = int(input())
-m = a
+m = 2**100
 f1 = 0
 f2 = 1
+b = False
 while a != 0:
     a = int(input())
     if a == 0:
         break
-    for i in range(2, 100):
+    for i in range(2, a+1):
         f1 = f1 + f2
-        if f1 == a and a < m:
+        f2 = f1 + f2
+        if (f1 == a or f2 == a) and a < m:
             m = a
-if f1 == a:
+            b = True
+    f1 = 0
+    f2 = 1
+if b:
     print('Minimal Fibonacci number:', m)
 else:
     print('None of input numbers are Fibonacci')

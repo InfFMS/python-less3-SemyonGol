@@ -4,7 +4,7 @@
 # Если таких чисел не было, вывести "нет".
 
 N = int(input())
-m = 0
+m = 2**100
 M = 0
 b = True
 for i in range(1, N+1):
@@ -15,12 +15,12 @@ for i in range(1, N+1):
     if b:
         if a > M:
             M = a
-        else:
+        elif a < m:
             m = a
     b = True
-if m == M == 0:
+if M == 0 and m == 2**100:
     print('None of input numbers are prime')
-elif m == 0 or M == 0:
+elif m == 2**100 or M == 0 or m == M:
     print('Only one prime was inputed:',M)
 else:
     print('Minimal prime:', m,'Maximal prime:', M)
