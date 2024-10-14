@@ -15,7 +15,7 @@ for i in range(1, N+1):
     if b:
         if a > M:
             M = a
-        elif a < m:
+        if a < m:
             m = a
     b = True
 if M == 0 and m == 2**100:
